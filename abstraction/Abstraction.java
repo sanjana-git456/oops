@@ -1,5 +1,5 @@
 abstract class Shape {
-    abstract void area();
+    public abstract void area();
 }
 
 class Circle extends Shape {
@@ -9,7 +9,8 @@ class Circle extends Shape {
         this.r = r;
     }
 
-    void area() {
+    @Override
+    public void area() {
         System.out.println(3.14 * r * r);
     }
 }
@@ -23,7 +24,8 @@ class Rectangle extends Shape {
         this.b = b;
     }
 
-    void area() {
+    @Override
+    public void area() {
         System.out.println(l * b);
     }
 }
